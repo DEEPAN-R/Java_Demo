@@ -1,13 +1,16 @@
 package demo.git;
 
+interface Calculate{
+	int add(int i,int j);
+}
 public class MainClass {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(calculate(10, 11));
-	}
-	public static int calculate(int a,int b) {
-		return a +b;
+		Calculate calculate = (int i,int j)->{
+			return i+j;
+		};
+		System.out.println(calculate.add(10, 11));
 	}
 
 }
